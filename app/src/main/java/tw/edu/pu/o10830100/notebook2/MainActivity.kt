@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -27,13 +28,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        val btn_add = findViewById<Button>(R.id.btn_add)
+        val logo = findViewById<ImageView>(R.id.logo)
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = linearLayoutManager
         adapter = MyAdapter(contacts)
         recyclerView.adapter = adapter
-        btn_add.setOnClickListener {
+        logo.setOnClickListener {
             startActivityForResult(Intent(this, SecActivity::class.java), 1)
         }
     }
