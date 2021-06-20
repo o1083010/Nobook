@@ -6,7 +6,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/a"
-        android:label="@string/app_name"
+        android:label="NoBook"
         android:roundIcon="@drawable/a"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteBook2">
